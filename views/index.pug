@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Download exam results no longer accessible from university website
+  h2 Usage
+  p To run this Express application clone repo, navigate to project root folder, install Node dependencies and start the app. Once it's started trigger downloadFiles endpoint with required query params:
+  p <b>lastFile</b> - id of last file uploaded to server  
+  p <b>numOfFiles</b> - number of files you want to download 
+  p Files are downloaded in decremental order and saved in folder DownloadedFiles with report listed at listFilesResult.csv
+  h3 Run Express app
+  p Open terminal in root project folder and install dependencies: <b>npm install</b>
+  p Run app in terminal: <b>DEBUG=myapp:* npm start</b>
+  p Open browser, navigate to downloadFiles endpoint with required params: <b><a href="http://localhost:3000/downloadFiles?lastFile=50191&numOfFiles=3">http://localhost:3000/downloadFiles?lastFile=<i>50191</i>&numOfFiles=<i>3</i></a></b>
+  p Check results in DownloadedFiles
