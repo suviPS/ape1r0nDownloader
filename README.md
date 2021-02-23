@@ -2,7 +2,7 @@
  Download exam results no longer accessible from university website
  
 ## Usage
-To run this Express application clone repo, navigate to project root folder, install Node dependencies and start the app. Once it is started, trigger downloadFiles endpoint with required query params:
+To run this Express application clone repo, navigate to project root folder, install Node dependencies and start the app. Once it is started, trigger downloadFiles endpoint with required query params: <br>
 <b>lastFile</b> - id of last file uploaded to server  
 <b>numOfFiles</b> - number of files you want to download 
 
