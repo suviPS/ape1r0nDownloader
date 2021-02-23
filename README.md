@@ -11,6 +11,6 @@ Files are downloaded in decremental order and saved in folder DownloadedFiles wi
 ### Run Express app
 1. Open terminal in root project folder and install dependencies: ```npm install```
 2. Run app in terminal: ```DEBUG=myapp:* npm start```
-3. Open browser, navigate to downloadFiles endpoint with required params: <b><a href="http://localhost:3000/downloadFiles?lastFile=50191&numOfFiles=3">http://localhost:3000/downloadFiles?lastFile=<i>50191</i>&numOfFiles=<i>3</i></a></b>
+3. Open browser, navigate to downloadFiles endpoint with required params: <b><a href="http://localhost:3000/downloadFiles?lastFile=50191&numOfFiles=3">http://localhost:3000/downloadFiles?lastFile=50191&numOfFiles=3</a></b>
 
 Check results in DownloadedFiles
