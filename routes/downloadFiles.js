@@ -4,6 +4,8 @@ const request = require('sync-request');
 const fs = require('fs');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
+const sleep = delay => new Promise(resolve => { setTimeout(resolve, delay) }, delay);
+
 const csvWriter = createCsvWriter({
     path: 'listFilesResult.csv',
     //ID : Type : Name : URL 
@@ -44,6 +46,7 @@ router.get('/', async function(req, res, next) {
             var name = apeironRes.headers['content-disposition'].split(';')[1].substring(10);
             //replace forward slash in file name with dash
             name = name.replace(/\//g, '-');
+            name = `${i}. ${name}`;
 
             //type header
             var type = apeironRes.headers['content-type'];
@@ -76,7 +79,8 @@ router.get('/', async function(req, res, next) {
             fileList[lastFileNumber - i] = fileEntry;
         }
         
-        //TODO add delay 
+        //add delay between requests
+        await sleep(5000 + (lastFileNumber - i) * 2);
     }
 
     //create CSV 
